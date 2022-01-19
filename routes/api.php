@@ -19,7 +19,7 @@ use App\Http\Controllers\RamdomNumberController;
 
 Route::middleware(['middleware' => 'api'])->group(function () {
     Route::get('/sheet', [GenerateSheetController::class, 'index']);
-    Route::get('/number', [RamdomNumberController::class, 'index']);
+    Route::post('/number', [RamdomNumberController::class, 'index']);
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
