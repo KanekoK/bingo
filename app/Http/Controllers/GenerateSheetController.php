@@ -9,8 +9,8 @@ class GenerateSheetController extends Controller
     public function index()
     {
         $nums_range = range(1, 99);
-        $rand_keys = array_rand($nums_range, 24);
-        shuffle($rand_keys);
-        return $rand_keys;
+        shuffle($nums_range);
+        $bingo_range = array_splice($nums_range, 0, 24);
+        return $bingo_range;
     }
 }
